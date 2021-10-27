@@ -23,7 +23,7 @@ files = [
 ]
 
 
-#declare an event object
+#declare an event object. Events in the CMS detector are Proton-Proton collisions which include many parameters. Momentum before and after, movement through the detector, etc.
 events=Events(files)
 
 #define a Handle. A handle is a pointer to an object stored into the collission event. In this case I define a handle to a collection of electrons:
@@ -66,7 +66,7 @@ for event in events:
 
 
 
-    #apply a selection! (Your code will go here I apply as example H/E <0.1)
+    #applying a selection. 
     selectedElectrons=[]
     for e in electrons:
         if e.hcalOverEcal()<0.1:
@@ -86,7 +86,7 @@ for event in events:
                 break #if it finds a match it stops
             
         
-    #loop on all and add code here to calculate the misID probability
+    
 
         
 
